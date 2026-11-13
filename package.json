@@ -1,0 +1,24 @@
+{
+  "name": "first-jenkins-job",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests:headless": "npx playwright test",
+    "tests:headed": "npx playwright test --headed",
+    "test:specific:headless": "npx playwright test --grep file-name.spec.js",
+    "test:specific:headed": "npx playwright test --grep file-name.spec.js --headed",
+    "test:tag:headless": "npx playwright test --grep @auth",
+    "test:tag:headed": "npx playwright test --grep @start-app-step --headed",
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10"
+  }
+}
